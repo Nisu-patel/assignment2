@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Market vs Target Audience</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #e0f2f7; /* Light blue background */
+            color: #333; /* Dark text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative; /* For absolute positioning of the button */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #0d47a1; /* Dark blue heading */
+            margin-bottom: 40px;
+        }
+
+        .diagram {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .node {
+            background-color: #0d47a1; /* Dark blue nodes */
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .node.secondary {
+            background-color: #29b6f6; /* Light blue secondary node */
+        }
+
+        .node.tertiary {
+            background-color: #1e88e5; /* Medium blue tertiary nodes */
+            width: 280px; /* Adjust width for tertiary nodes */
+        }
+
+        .connector {
+            width: 2px;
+            height: 40px;
+            background-color: #90caf9; /* Light blue connector */
+            position: absolute;
+            top: 65px; /* Adjust based on node height and margin */
+        }
+
+        .connector.top-to-middle {
+            top: 58px;
+        }
+
+        .connector.middle-to-bottom {
+            height: 60px;
+            top: 58px;
+        }
+
+        .connector::before,
+        .connector::after {
+            content: '';
+            position: absolute;
+            border: 6px solid transparent;
+        }
+
+        .connector::before {
+            top: -6px;
+            border-bottom-color: #90caf9;
+            left: -6px;
+        }
+
+        .connector::after {
+            bottom: -6px;
+            border-top-color: #90caf9;
+            left: -6px;
+        }
+
+        .level-label {
+            position: absolute;
+            left: -120px; /* Adjust for positioning */
+            font-weight: bold;
+            color: #263238; /* Dark grey label */
+        }
+
+        .bottom-nodes {
+            display: flex;
+            gap: 20px;
+        }
+
+        .next-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #f00; /* Red background */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow */
+        }
+
+        .next-button:hover {
+            background-color: #d00; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Target market vs target audience</h1>
+        <div class="diagram">
+            <div class="node">
+                <span class="level-label" style="top: 18px;">Business</span>
+                Marketing platform
+            </div>
+            <div class="connector top-to-middle"></div>
+            <div class="node secondary">
+                <span class="level-label" style="top: 18px;">Target<br>market</span>
+                Small businesses
+            </div>
+            <div class="connector middle-to-bottom"></div>
+            <div class="bottom-nodes">
+                <div class="node tertiary">
+                    <span class="level-label" style="top: 35px;">Target<br>audiences</span>
+                    Local service-based<br>business owners
+                </div>
+                <div class="node tertiary">
+                    Marketing<br>managers for<br>small ecom<br>businesses
+                </div>
+                <div class="node tertiary">
+                    Freelance<br>marketing<br>consultants
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="next-button">Next</button>
+
+    <script>
+        const nextButton = document.querySelector('.next-button');
+        nextButton.addEventListener('click', () => {
+            alert('Next button clicked!');
+            // Add your navigation logic here
+        });
+    </script>
+</body>
+</html>

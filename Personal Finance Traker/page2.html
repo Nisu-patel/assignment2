@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracking System Features</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f4f4f4; /* Light grey background */
+            color: #333; /* Dark text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative; /* For absolute positioning of the button */
+        }
+
+        .top-section {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .phone-mockup {
+            background-color: #222; /* Dark phone color */
+            border-radius: 20px;
+            padding: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .phone-screen {
+            width: 200px; /* Adjust phone width as needed */
+            height: 400px; /* Adjust phone height as needed */
+            background-color: #333; /* Dark screen background */
+            border-radius: 15px;
+            overflow: hidden; /* Clip content within rounded borders */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #eee;
+            font-size: 0.8em;
+            text-align: center;
+            /* Add your actual phone screen content or images here */
+        }
+
+        .features-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-number {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #007bff; /* Blue accent color */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+
+        .illustration {
+            max-width: 400px; /* Adjust illustration size */
+            margin-top: 20px;
+        }
+
+        .next-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #f00; /* Red background */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow */
+        }
+
+        .next-button:hover {
+            background-color: #d00; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="top-section">
+        <div class="phone-mockup">
+            <div class="phone-screen">
+                <img src="phone_screen_1.png" alt="Phone Screen 1" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+        <div class="phone-mockup">
+            <div class="phone-screen">
+                <img src="phone_screen_2.png" alt="Phone Screen 2" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+        <div class="phone-mockup">
+            <div class="phone-screen">
+                <img src="phone_screen_3.png" alt="Phone Screen 3" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+        <div class="phone-mockup">
+            <div class="phone-screen">
+                <img src="phone_screen_4.png" alt="Phone Screen 4" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+        <div class="phone-mockup">
+            <div class="phone-screen">
+                <img src="phone_screen_5.png" alt="Phone Screen 5" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+
+    <div class="features-section">
+        <h2>Key Features To Look for in an Expense Tracking System</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-number">01</div>
+                <span>Expense Capture</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">02</div>
+                <span>Approval Workflows</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">03</div>
+                <span>Receipt Management</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">04</div>
+                <span>Policy Enforcement</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">05</div>
+                <span>Integration with Accounting Systems</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">06</div>
+                <span>Reporting and Analytics</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">07</div>
+                <span>Mobile Accessibility</span>
+            </div>
+            <div class="feature-item">
+                <div class="feature-number">08</div>
+                <span>Integration with Travel Booking Systems</span>
+            </div>
+        </div>
+    </div>
+
+    <img src="illustration.png" alt="Expense Tracking Illustration" class="illustration">
+
+    <button class="next-button">Next</button>
+
+    <script>
+        const nextButton = document.querySelector('.next-button');
+        nextButton.addEventListener('click', () => {
+            alert('Next button clicked!');
+            // Add your navigation logic here
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protecting Personal Data in Financial Systems</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f4f4f4; /* Light grey background */
+            color: #333; /* Dark text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative; /* For absolute positioning of the button */
+        }
+
+        .container {
+            max-width: 800px; /* Adjust as needed */
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3777a3; /* Dark blue heading */
+            margin-bottom: 30px;
+        }
+
+        .radial-chart {
+            position: relative;
+            width: 300px; /* Adjust size as needed */
+            height: 300px;
+            margin: 20px auto;
+        }
+
+        .segment {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            clip: rect(0, 150px, 300px, 0); /* Initially show left half */
+            transform-origin: 50% 50%;
+        }
+
+        .segment-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            clip: rect(0, 300px, 300px, 150px); /* Initially hide right half */
+            background-color: transparent; /* Will be set by JS */
+            transform-origin: 50% 50%;
+            display: flex;
+            justify-content: flex-start; /* Adjust for text position */
+            align-items: center;
+            padding-left: 20%; /* Adjust for text position */
+            box-sizing: border-box;
+        }
+
+        .segment-label {
+            position: absolute;
+            /* Adjust positioning for labels */
+            font-size: 0.9em;
+            white-space: nowrap;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .segment-number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* Initial colors - will be overridden by JS for dynamic appearance */
+        .segment-1 .segment-inner { background-color: #ffeb3b; } /* Yellow */
+        .segment-2 .segment-inner { background-color: #ff9800; } /* Orange */
+        .segment-3 .segment-inner { background-color: #f44336; } /* Red */
+        .segment-4 .segment-inner { background-color: #9c27b0; } /* Purple */
+        .segment-5 .segment-inner { background-color: #673ab7; } /* Deep Purple */
+        .segment-6 .segment-inner { background-color: #3f51b5; } /* Indigo */
+        .segment-7 .segment-inner { background-color: #4caf50; } /* Green */
+
+        .segment-1 .segment-label { top: 10%; right: 10%; }
+        .segment-2 .segment-label { top: 30%; right: 5%; }
+        .segment-3 .segment-label { bottom: 30%; right: 5%; }
+        .segment-4 .segment-label { bottom: 10%; right: 10%; }
+        .segment-5 .segment-label { bottom: 10%; left: 10%; }
+        .segment-6 .segment-label { bottom: 30%; left: 5%; }
+        .segment-7 .segment-label { top: 30%; left: 5%; }
+
+        .next-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #f00; /* Red background */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow */
+        }
+
+        .next-button:hover {
+            background-color: #d00; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Protecting Personal Data in Financial Systems</h1>
+        <div class="radial-chart">
+            <div class="segment segment-1" style="transform: rotate(0deg);">
+                <div class="segment-inner"></div>
+                <div class="segment-number">1</div>
+                <div class="segment-label">Access Control</div>
+            </div>
+            <div class="segment segment-2" style="transform: rotate(51.43deg);">
+                <div class="segment-inner"></div>
+                <div class="segment-number">2</div>
+                <div class="segment-label">Data Minimization</div>
+            </div>
+            <div class="segment segment-3" style="transform: rotate(102.86deg);">
+                <div class="segment-inner"></div>
+                <div class="segment-number">3</div>
+                <div class="segment-label">Secure Communication</div>
+            </div>
+            <div class="segment segment-4" style="transform: rotate(154.29deg);">
+                <div class="segment-inner"></div>
+                <div class="segment-number">4</div>
+                <div class="segment-label">Regular Auditing and Monitoring</div>
+            </div>
+            <div class="segment segment-5" style="transform: rotate(205.71deg);">
+                <div class="segment-inner"></div>
+                <div class="segment-number">5</div>
+                <div class="segment-label">Employee Training and Awareness</div>
+            </div>
+            <div class="segment segment-6" style="transform: rotate(257.14deg);">
+                <div class="segment-inner"></div>
+                <div class="segment-number">6</div>
+                <div class="segment-label">Compliance with Regulations</div>
+            </div>
+            <div class="segment segment-7" style="transform: rotate(308.57deg);">
+                <div class="segment-inner"></div>
+                <div class="segment-number">7</div>
+                <div class="segment-label">Encryption</div>
+            </div>
+        </div>
+    </div>
+
+    <button class="next-button">Next</button>
+
+    <script>
+        // Basic JavaScript to potentially add interactivity or dynamic styling later
+        const segments = document.querySelectorAll('.segment');
+        // You can add event listeners or animations here if needed
+    </script>
+</body>
+</html>

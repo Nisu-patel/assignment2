@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Overview</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4; /* Light grey background */
+            color: #333; /* Dark text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative; /* For absolute positioning of the button */
+        }
+
+        .container {
+            max-width: 800px; /* Adjust as needed */
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2962ff; /* Blue heading - you can adjust */
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            width: 100%;
+            max-width: 600px; /* Adjust image size */
+            margin-bottom: 30px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overview-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .next-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #f00; /* Red background */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow */
+        }
+
+        .next-button:hover {
+            background-color: #d00; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Understanding Your Finances</h1>
+        <div class="image-container">
+            <img src="finance_overview.png" alt="Finance Overview Diagram">
+        </div>
+        <div class="overview-text">
+            This image provides a visual overview of various aspects of personal finance.
+            It touches upon key concepts such as:
+            <ul>
+                <li><strong>Debt:</strong> Represented by a bomb, indicating its potential negative impact.</li>
+                <li><strong>Savings:</strong> Shown as a piggy bank, symbolizing putting money aside.</li>
+                <li><strong>Finance:</strong> The central theme, encompassing all related activities.</li>
+                <li><strong>Home:</strong> Possibly representing a major financial goal or asset.</li>
+                <li><strong>Financial Plan:</strong> Illustrated with a pie chart showing income, investment, and tax.</li>
+                <li><strong>Tax:</strong> Depicted with arrows showing deductions, bills, and planning.</li>
+                <li><strong>Investment/Stocks:</strong> Shown with graphs indicating market fluctuations.</li>
+                <li><strong>Growth:</strong> Represented by a plant growing from savings and a rising bar chart.</li>
+                <li><strong>Currency Exchange:</strong> Illustrated by circulating Bitcoin and Dollar symbols.</li>
+            </ul>
+            Understanding these elements is crucial for effective financial management and planning for a secure future.
+        </div>
+    </div>
+
+    <button class="next-button">Next</button>
+
+    <script>
+        const nextButton = document.querySelector('.next-button');
+        nextButton.addEventListener('click', () => {
+            alert('Next button clicked!');
+            // Add your navigation logic here
+        });
+    </script>
+</body>
+</html>

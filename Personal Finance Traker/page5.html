@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Experience Design Process</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f8f9fa; /* Light grey background */
+            color: #333; /* Dark text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative; /* For absolute positioning of the button */
+        }
+
+        .container {
+            max-width: 960px; /* Adjust as needed */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #343a40; /* Dark grey heading */
+            margin-bottom: 40px;
+        }
+
+        .process-flow {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #6c757d; /* Grey circle */
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .step-label {
+            font-weight: bold;
+            color: #495057; /* Darker grey label */
+        }
+
+        .step-content {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .step-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step-content li {
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        .connector {
+            height: 10px;
+            background-color: #ced4da; /* Light grey connector */
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .connector.color-1 { background-color: #e83e8c; } /* Pink */
+        .connector.color-2 { background-color: #fd7e14; } /* Orange */
+        .connector.color-3 { background-color: #20c997; } /* Teal */
+        .connector.color-4 { background-color: #007bff; } /* Blue */
+
+        .start-label {
+            position: absolute;
+            top: -40px;
+            left: -20px;
+            font-weight: bold;
+            color: #dc3545; /* Red "START" */
+        }
+
+        .end-arrow {
+            width: 0;
+            height: 0;
+            border-left: 20px solid #007bff; /* Blue arrow */
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            margin-left: 20px;
+        }
+
+        .info-boxes {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+
+        .info-box {
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            padding: 20px;
+            width: 200px; /* Adjust width as needed */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .info-box-title {
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-box li {
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        .next-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #f00; /* Red background */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow */
+        }
+
+        .next-button:hover {
+            background-color: #d00; /* Darker red on hover */
+        }
+
+        @media (max-width: 768px) {
+            .process-flow {
+                flex-direction: column;
+                align-items: center;
+            }
+            .connector {
+                width: 10px;
+                height: 50px;
+                margin: 20px 0;
+            }
+            .end-arrow {
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 20px solid #007bff;
+                border-bottom: none;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            .start-label {
+                top: -60px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .info-boxes {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .info-box {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>USER EXPERIENCE DESIGN PROCESS</h1>
+        <div class="process-flow">
+            <span class="start-label">START</span>
+            <div class="step">
+                <div class="step-number" style="background-color: #e83e8c;">01</div>
+                <div class="step-label">RESEARCH</div>
+                <div class="step-content">
+                    <ul>
+                        <li><img src="search_icon.png" alt="Research Icon" style="width: 20px; margin-right: 5px; vertical-align: middle;"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="connector color-1"></div>
+            <div class="step">
+                <div class="step-number" style="background-color: #fd7e14;">02</div>
+                <div class="step-label">EMPATHIZE</div>
+                <div class="step-content">
+                    <ul>
+                        <li><img src="user_icon.png" alt="Empathize Icon" style="width: 20px; margin-right: 5px; vertical-align: middle;"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="connector color-2"></div>
+            <div class="step">
+                <div class="step-number" style="background-color: #20c997;">03</div>
+                <div class="step-label">CREATE</div>
+                <div class="step-content">
+                    <ul>
+                        <li><img src="lightbulb_icon.png" alt="Create Icon" style="width: 20px; margin-right: 5px; vertical-align: middle;"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="connector color-3"></div>
+            <div class="step">
+                <div class="step-number" style="background-color: #007bff;">04</div>
+                <div class="step-label">TEST</div>
+                <div class="step-content">
+                    <ul>
+                        <li><img src="test_icon.png" alt="Test Icon" style="width: 20px; margin-right: 5px; vertical-align: middle;"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="connector color-4"></div>
+            <div class="step">
+                <div class="step-number" style="background-color: #007bff;">05</div>
+                <div class="step-label">DEVELOP</div>
+                <div class="step-content">
+                    <ul>
+                        <li><img src="develop_icon.png" alt="Develop Icon" style="width: 20px; margin-right: 5px; vertical-align: middle;"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="end-arrow"></div>
+        </div>
+
+        <div class="info-boxes">
+            <div class="info-box">
+                <div class="info-box-title">MEET THE USER</div>
+                <ul>
+                    <li>1. User demographics</li>
+                    <li>2. Define user goals</li>
+                    <li>3. Define user challenges</li>
+                    <li>4. Define metrics & form hypothesis</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <div class="info-box-title">BE THE USERS</div>
+                <ul>
+                    <li>1. User personas</li>
+                    <li>2. User scenarios</li>
+                    <li>3. User testing</li>
+                    <li>4. User experience map</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <div class="info-box-title">MAKE IT SIMPLE</div>
+                <ul>
+                    <li>1. Wireframes</li>
+                    <li>2. Moodboard</li>
+                    <li>3. Mock-ups</li>
+                    <li>4. Style guide</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <div class="info-box-title">DATA DON'T LIE</div>
+                <ul>
+                    <li>1. Usability tests</li>
+                    <li>2. Review metrics</li>
+                    <li>3. Track usage</li>
+                    <li>4. Inform next iteration</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <div class="info-box-title">STICK TO THE DESIGN</div>
+                <ul>
+                    <li>1. Usability tests</li>
+                    <li>2. Review metrics</li>
+                    <li>3. Track usage</li>
+                    <li>4. Inform next</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <button class="next-button">Next</button>
+
+    <script>
+        const nextButton = document.querySelector('.next-button');
+        nextButton.addEventListener('click', () => {
+            alert('Next button clicked!');
+            // Add your navigation logic here
+        });
+    </script>
+</body>
+</html>

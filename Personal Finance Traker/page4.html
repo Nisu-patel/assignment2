@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Cases of Personal Finance App</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f8f9fa; /* Light grey background */
+            color: #333; /* Dark text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative; /* For absolute positioning of the button */
+        }
+
+        .container {
+            display: flex;
+            max-width: 960px; /* Adjust as needed */
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        h1 {
+            color: #007bff; /* Blue heading */
+            margin-bottom: 30px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .left-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .app-illustration {
+            max-width: 400px; /* Adjust size as needed */
+            height: auto;
+        }
+
+        .right-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .use-case-button {
+            background-color: #007bff; /* Blue button */
+            color: #fff;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .use-case-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .next-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #f00; /* Red background */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow */
+        }
+
+        .next-button:hover {
+            background-color: #d00; /* Darker red on hover */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .left-section, .right-section {
+                width: 80%;
+                margin-bottom: 30px;
+            }
+            .app-illustration {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Use Cases of Personal Finance App</h1>
+    <div class="container">
+        <div class="left-section">
+            <img src="app_illustration.png" alt="Personal Finance App Illustration" class="app-illustration">
+        </div>
+        <div class="right-section">
+            <button class="use-case-button">Visualization</button>
+            <button class="use-case-button">Payment Reminders</button>
+            <button class="use-case-button">Expense Tracking</button>
+            <button class="use-case-button">Ai-Assisted Saving Plan</button>
+            <button class="use-case-button">Reports and Stats</button>
+            <button class="use-case-button">Robust Security</button>
+            <button class="use-case-button">Debit/Credit Card Integration</button>
+        </div>
+    </div>
+
+    <button class="next-button">Next</button>
+
+    <script>
+        const nextButton = document.querySelector('.next-button');
+        nextButton.addEventListener('click', () => {
+            alert('Next button clicked!');
+            // Add your navigation logic here
+        });
+    </script>
+</body>
+</html>

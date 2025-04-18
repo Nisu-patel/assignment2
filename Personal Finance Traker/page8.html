@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Create A Career Development Plan</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333; /* Dark text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative; /* For absolute positioning of the button */
+        }
+
+        .container {
+            max-width: 960px; /* Adjust as needed */
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2962ff; /* Blue heading */
+            margin-bottom: 40px;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .step-card {
+            background-color: #29b6f6; /* Light blue step background */
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 180px; /* Adjust width as needed */
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .step-icon-container {
+            background-color: #fff;
+            color: #29b6f6;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .step-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            font-size: 0.9em;
+        }
+
+        .next-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #f00; /* Red background */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow */
+        }
+
+        .next-button:hover {
+            background-color: #d00; /* Darker red on hover */
+        }
+
+        @media (max-width: 768px) {
+            .steps-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .step-card {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>How to Create A Career Development Plan</h1>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-icon-container">✏️</div>
+                <div class="step-title">STEP 1</div>
+                <div class="step-description">Assess Your Current Situation</div>
+            </div>
+            <div class="step-card">
+                <div class="step-icon-container">🎯</div>
+                <div class="step-title">STEP 2</div>
+                <div class="step-description">Identify Your Desired End-Point</div>
+            </div>
+            <div class="step-card">
+                <div class="step-icon-container">🧠</div>
+                <div class="step-title">STEP 3</div>
+                <div class="step-description">Perform A Gap Analysis</div>
+            </div>
+            <div class="step-card">
+                <div class="step-icon-container">🗺️</div>
+                <div class="step-title">STEP 4</div>
+                <div class="step-description">Create a Roadmap with SMART Objectives</div>
+            </div>
+            <div class="step-card">
+                <div class="step-icon-container">💡</div>
+                <div class="step-title">STEP 5</div>
+                <div class="step-description">Regularly Review</div>
+            </div>
+        </div>
+    </div>
+
+    <button class="next-button">Next</button>
+
+    <script>
+        const nextButton = document.querySelector('.next-button');
+        nextButton.addEventListener('click', () => {
+            alert('Next button clicked!');
+            // Add your navigation logic here
+        });
+    </script>
+</body>
+</html>
